@@ -4,6 +4,11 @@ from motor.motor_asyncio import AsyncIOMotorClient
 import os
 from dotenv import load_dotenv
 
+
+@app.get("/")
+def read_root():
+    return {"message": "Tinabox API is running 🚀"}
+
 # ---------------------------
 # Load .env
 # ---------------------------
