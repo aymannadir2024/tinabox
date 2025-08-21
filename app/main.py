@@ -5,9 +5,7 @@ import os
 from dotenv import load_dotenv
 
 
-@app.get("/")
-def read_root():
-    return {"message": "Tinabox API is running 🚀"}
+
 
 # ---------------------------
 # Load .env
@@ -30,6 +28,10 @@ db = client["tinabox"]
 # ---------------------------
 app = FastAPI(title="Tinabox API", version="0.1.0")
 
+
+@app.get("/")
+def read_root():
+    return {"message": "Tinabox API is running 🚀"}
 # ---------------------------
 # Schemas
 # ---------------------------
